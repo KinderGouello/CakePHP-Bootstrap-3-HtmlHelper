@@ -1,4 +1,5 @@
 <?php
+
 App::uses('View', 'View');
 App::uses('Helper', 'View');
 App::uses('BsHelper', 'View/Helper');
