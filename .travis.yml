@@ -8,6 +8,7 @@ env:
 
 before_script:
     - git clone --depth 1 --branch $CAKE_VERSION git://github.com/cakephp/cakephp ../cake && cd ../cake
+    - mv ../CakePHP-Bootstrap-3-HtmlHelper/Config/bootstrap.php app/Config/bootstrap.php
     - mv ../CakePHP-Bootstrap-3-HtmlHelper/View/Helper/BsHelper.php app/View/Helper/BsHelper.php
     - mv ../CakePHP-Bootstrap-3-HtmlHelper/Test/Case/View/Helper/BsHelperTest.php app/Test/Case/View/Helper/BsHelperTest.php
     - sh -c "if [ '$TRAVIS_PHP_VERSION' != '5.2' ]; then composer global require 'phpunit/phpunit=3.7.33'; fi"
