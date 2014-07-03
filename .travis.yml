@@ -25,4 +25,4 @@ before_script:
         }" > ../cake/app/Config/database.php
 
 script:
-    - app/Console/cake test app View/Helper/BsHelper --stderr
+    - ./lib/Cake/Console/cake test app View/Helper/BsHelper --stderr
