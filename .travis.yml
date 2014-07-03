@@ -15,13 +15,14 @@ before_script:
     - echo "<?php
         class DATABASE_CONFIG {
         public \$test = array(
-            'datasource' => 'Database/Mysql',
-            'database' => 'cakephp_test',
-            'host' => '127.0.0.1',
-            'login' => 'travis',
-            'persistent' => false,
+          'persistent' => false,
+          'host' => '',
+          'login' => '',
+          'password' => '',
+          'database' => 'cakephp_test',
+          'prefix' => ''
         );
-        }" > ../cakephp/app/Config/database.php
+        }" > ../cake/app/Config/database.php
 
 script:
     - app/Console/cake test app View/Helper/BsHelper --stderr
